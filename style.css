@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Nastavenie výšky na 100% výšky viewportu */
+}
+
+header {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: bold;
+    margin: 0 auto; /* Umiestni text do stredu lišty */
+    cursor: none;
+}
+
+.logo:hover {
+    transition-delay: 2s;
+    transition: transform 2s ease;
+    color: orange;
+}
+
+.blog {
+    display: none; /* Začiatočná hodnota - skryté */
+    color: orange;
+}
+
+
+
+.join-button {
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    padding: 8px 12px;
+    margin-right: 10px;
+    cursor: default;
+    border-radius: 8px;
+}
+
+.join-button:hover {
+    background-color: rgb(255, 255, 255); /* Zachováme čiernu farbu */
+    color: rgb(0, 0, 0); /* Zachováme bielu farbu textu */
+    border: 2px solid black; /* Čiara hrany kruhu */
+}
+
+.main-content {
+    text-align: center; /* Vycentruje obsah do stredu */
+}
+
+.big-join-button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 24px 48px; /* Zväčšil som veľkosť tlačidla */
+    margin-top: 20px;
+    cursor: none;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: bold; /* Hrubý text */
+    font-family: 'Montserrat', sans-serif; /* Moderný font (použiteľný, ak ste ho pridali cez Google Fonts) */
+}
+
+.big-join-button:hover {
+    background-color: rgb(255, 255, 255); /* Zachováme čiernu farbu */
+    color: rgb(0, 0, 0); /* Zachováme bielu farbu textu */
+    border: 2px solid black; /* Čiara hrany kruhu */
+}
+
+.big-join-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: transparent; /* Transparentná farba prehradí */
+    border: 2px solid black; /* Čiara hrany kruhu */
+    border-radius: 50%;
+    transform: scale(0);
+    transition: transform 0.3s ease, border-color 0.3s ease; /* Pridaná vlastnosť pre zmenu farby čiary */
+}
+
+.big-join-button:hover::before {
+    transform: scale(2);
+    border-color: white; /* Zmeníme farbu čiary na bielu */
+}
